@@ -12,7 +12,7 @@ import Rank from './components/Rank/Rank';
 import './App.css';
  
 const particlesOptions = {
-        fpsLimit: 120,
+
         interactivity: {
           events: {
             onClick: {
@@ -30,7 +30,7 @@ const particlesOptions = {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
           },
@@ -47,7 +47,7 @@ const particlesOptions = {
             width: 1,
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             direction: "none",
@@ -55,19 +55,19 @@ const particlesOptions = {
             outModes: {
               default: "bounce",
             },
-            random: false,
-            speed: 6,
-            straight: false,
+            random: true,
+            speed: 3,
+            straight: true,
           },
           number: {
             density: {
               enable: true,
               area: 800,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
-            value: 0.5,
+            value: 0.3,
           },
           shape: {
             type: "circle",
@@ -187,7 +187,7 @@ class App extends Component {
   const particlesLoaded = (container) => {
     console.log(container);
   };
-  
+
     return (
       <div className="App">
          <Particles 
